@@ -6,19 +6,25 @@
 	<artifactId>my.company.do_something.plugins</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>my.company.do_something.plugins</name>
+	<description>Parent project for the my.company.do_something plug-in and fragment projects</description>
+	
 	<parent>
 		<groupId>my.company</groupId>
 		<artifactId>my.company.do_something.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
+	
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
+	
 	<modules>
 		<module>my.company.do_something</module>
 		<module>my.company.do_something.tests</module>
 	</modules>
+	
 	<profiles>
 		<profile>
 			<id>sign</id>

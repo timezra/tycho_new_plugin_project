@@ -9,14 +9,19 @@
 	<artifactId>${artifactId}.features</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>${artifactId}.features</name>
+	<description>Parent project for the ${artifactId} feature projects</description>
+	
 	<parent>
 		<groupId>${groupId}</groupId>
 		<artifactId>${artifactId}.parent</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
+	
 	<modules>
 		<module>${artifactId}.feature</module>
 	</modules>
+	
 	<profiles>
 		<profile>
 			<id>sign</id>

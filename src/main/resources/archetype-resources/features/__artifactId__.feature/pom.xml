@@ -9,6 +9,9 @@
 	<artifactId>${artifactId}.feature</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
+	<name>${artifactId}.feature</name>
+	<description>Feature project for the ${artifactId} plug-in</description>
+	
 	<parent>
 		<groupId>${groupId}</groupId>
 		<artifactId>${artifactId}.features</artifactId>

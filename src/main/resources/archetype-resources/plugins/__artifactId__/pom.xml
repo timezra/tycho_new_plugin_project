@@ -9,6 +9,9 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>${artifactId}</name>
+	<description>${artifactId} plug-in project</description>
+	
 	<parent>
 		<groupId>${groupId}</groupId>
 		<artifactId>${artifactId}.plugins</artifactId>

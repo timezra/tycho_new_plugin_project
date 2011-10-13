@@ -9,19 +9,25 @@
 	<artifactId>${artifactId}.plugins</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>${artifactId}.plugins</name>
+	<description>Parent project for the ${artifactId} plug-in and fragment projects</description>
+	
 	<parent>
 		<groupId>${groupId}</groupId>
 		<artifactId>${artifactId}.parent</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
+	
 	<properties>
 		<maven.compiler.source>${javaVersion}</maven.compiler.source>
 		<maven.compiler.target>${javaVersion}</maven.compiler.target>
 	</properties>
+	
 	<modules>
 		<module>${artifactId}</module>
 		<module>${artifactId}.tests</module>
 	</modules>
+	
 	<profiles>
 		<profile>
 			<id>sign</id>

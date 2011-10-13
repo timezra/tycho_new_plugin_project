@@ -6,11 +6,15 @@
 	<artifactId>my.company.do_something.update-site</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>eclipse-update-site</packaging>
+	<name>my.company.do_something.update-site</name>
+	<description>Update site project for the my.company.do_something plug-in</description>
+	
 	<parent>
 		<groupId>my.company</groupId>
 		<artifactId>my.company.do_something.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
+	
 	<build>
 		<plugins>
 			<plugin>

@@ -9,11 +9,15 @@
 	<artifactId>${artifactId}.update-site</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>eclipse-update-site</packaging>
+	<name>${artifactId}.update-site</name>
+	<description>Update site project for the ${artifactId} plug-in</description>
+	
 	<parent>
 		<groupId>${groupId}</groupId>
 		<artifactId>${artifactId}.parent</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
+	
 	<build>
 		<plugins>
 			<plugin>
