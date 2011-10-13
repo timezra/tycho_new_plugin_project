@@ -1,0 +1,27 @@
+This project contains a Maven/Tycho archetype for creating a new Tycho-enabled Eclipse plugin, a test fragment, a feature and an update site.
+
+This contents of this project structure are based on the sample project outlined in this tutorial: http://timezra.blogspot.com/2011/10/eclipse-plug-ins-program-to-publish.html
+
+The goal of this archetype is to enable a developer to deploy a working plugin to the world quickly by automating some of the ceremony involved in setting up all the components required for publishing a plug-in.
+
+This project can be built and tested using standard Maven goals:
+  $> mvn clean install
+
+The installed artifact will then be available and can be used as follows:
+  $> mvn archetype:generate -Dfilter=timezra.tycho:new-plugin-project-archetype
+     There should only be one choice
+     Enter values for your plug-in
+       groupId: Your group id
+       artifactId: The OSGi Bundle-SymbolicName
+       version: The Maven version as well as the OSGi Bundle-Version, both suffixed with -SNAPSHOT and .qualifier, respectively
+       package: The root package of the plug-in (often the same as the artifactId) 
+       eclipseVersion: Currently only indigo has been tested
+       javaVersion: Currently only 1.6 has been tested
+       pluginCategory: The Update Site Category that will contain the plug-in/feature
+       pluginName: The OSGi Bundle-Name for the plug-in
+       updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/apply-save-actions)
+  $> cd __artifactId__
+  $> mvn clean package integration-test
+       Or, if you have a certificate for jar signing
+     mvn -Psign -Dkeystore=/path/to/keystore -Dstorepass=_keystore_password_ -Dalias=_keystore_alias_ clean package integration-test
+

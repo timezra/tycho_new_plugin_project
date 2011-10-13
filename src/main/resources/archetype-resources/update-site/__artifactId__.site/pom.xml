@@ -1,0 +1,29 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>timezra.eclipse</groupId>
+	<artifactId>${artifactId}.site</artifactId>
+	<version>${version}-SNAPSHOT</version>
+	<packaging>eclipse-update-site</packaging>
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${artifactId}.site.parent</artifactId>
+		<version>${version}-SNAPSHOT</version>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${symbol_dollar}{tycho-version}</version>
+				<configuration>
+					<archiveSite>true</archiveSite>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

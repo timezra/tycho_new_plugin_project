@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>my.company</groupId>
+	<artifactId>my.company.do_something.tests</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>eclipse-test-plugin</packaging>
+	<parent>
+		<groupId>my.company</groupId>
+		<artifactId>my.company.do_something.plugins.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<build>
+		<outputDirectory>target/test-classes</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>osx</id>
+			<activation>
+				<property>
+					<name>java.vendor.url</name>
+					<value>http://www.apple.com/</value>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.eclipse.tycho</groupId>
+							<artifactId>tycho-surefire-plugin</artifactId>
+							<version>${tycho-version}</version>
+							<configuration>
+								<argLine>-XstartOnFirstThread</argLine>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+</project>

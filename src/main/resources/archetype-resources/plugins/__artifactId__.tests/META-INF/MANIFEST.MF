@@ -1,0 +1,13 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ${artifactId}.tests;singleton:=true
+Bundle-Version: ${version}.qualifier
+Bundle-Vendor: %providerName
+Fragment-Host: ${artifactId};bundle-version="${version}"
+Bundle-RequiredExecutionEnvironment: JavaSE-${javaVersion}
+Require-Bundle: org.junit4;bundle-version="[4.5.0,5.0.0)"
+Bundle-Localization: plugin
