@@ -11,7 +11,7 @@
 	<packaging>eclipse-feature</packaging>
 	<parent>
 		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}.features.parent</artifactId>
+		<artifactId>${artifactId}.features</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
 </project>

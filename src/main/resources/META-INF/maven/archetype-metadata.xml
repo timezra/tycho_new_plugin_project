@@ -109,25 +109,19 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-			<directory>update-site</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>update-site/__artifactId__.site/web</directory>
+			<directory>update-site/web</directory>
 			<includes>
 				<include>**/*.xsl</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
-			<directory>update-site/__artifactId__.site/web</directory>
+			<directory>update-site/web</directory>
 			<includes>
 				<include>**/*.css</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
-			<directory>update-site/__artifactId__.site</directory>
+			<directory>update-site</directory>
 			<includes>
 				<include>index.html</include>
 				<include>pom.xml</include>
