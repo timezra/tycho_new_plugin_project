@@ -42,6 +42,7 @@
 	</developers>
 
     <!-- Based on maven distribution signing information here: https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven -->
+	<!-- TO perform a release do: mvn release:perform -Darguments=-Dgpg.passphrase=__PASSPHRASE__ -->
 	<profiles>
 		<profile>
 			<id>sign</id>
