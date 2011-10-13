@@ -10,6 +10,68 @@
 
 	<name>new-plugin-project-archetype</name>
 
+	<description>Creates a new Tycho-enabled Eclipse plug-in project heirarchy along with a test fragment, a feature and an update site.</description>
+
+	<url>https://github.com/timezra/tycho_new_plugin_project</url>
+
+	<licenses>
+		<license>
+			<name>Eclipse Public License v1.0</name>
+			<url>http://www.eclipse.org/legal/epl-v10.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/timezra/tycho_new_plugin_project.git</connection>
+		<developerConnection>scm:git:git@github.com:timezra/tycho_new_plugin_project.git</developerConnection>
+		<url>http://github.com/timezra/tycho_new_plugin_project.git</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>timezra</id>
+			<name>Tim Myer</name>
+			<organization>SolutionsIQ, Inc.</organization>
+			<organizationUrl>http://www.solutionsiq.com/</organizationUrl>
+			<roles>
+				<role>model</role>
+			</roles>
+			<url>http://timezra.blogspot.com</url>
+		</developer>
+	</developers>
+
+    <!-- Based on maven distribution signing information here: https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven -->
+	<profiles>
+		<profile>
+			<id>sign</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.4</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<build>
 		<extensions>
 			<extension>
