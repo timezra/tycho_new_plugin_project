@@ -10,12 +10,6 @@
 	<name>new-plugin-project-archetype</name>
 	<description>Creates a new Tycho-enabled Eclipse plug-in project heirarchy along with a test fragment, a feature and an update site.</description>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-
 	<url>https://github.com/timezra/tycho_new_plugin_project</url>
 
 	<licenses>
