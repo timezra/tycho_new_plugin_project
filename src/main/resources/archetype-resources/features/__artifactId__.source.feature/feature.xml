@@ -1,0 +1,61 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="${artifactId}.source.feature"
+      label="%featureName"
+      version="${version}.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+   
+   <copyright>
+      %copyright
+   </copyright>   
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="${updateSiteLocation}"/>
+      <discovery label="%updateSiteName" url="${updateSiteLocation}"/>
+   </url>
+   
+   <requires>
+   </requires>
+
+   <plugin
+         id="${artifactId}"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="${artifactId}.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="${artifactId}.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="${artifactId}.tests.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

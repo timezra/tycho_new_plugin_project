@@ -109,6 +109,16 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
+			<directory>features/__artifactId__.source.feature</directory>
+			<includes>
+				<include>build.properties</include>
+				<include>feature.properties</include>
+				<include>feature.xml</include>
+				<include>license.html</include>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
 			<directory>update-site/web</directory>
 			<includes>
 				<include>**/*.xsl</include>

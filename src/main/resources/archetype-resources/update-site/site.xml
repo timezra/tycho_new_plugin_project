@@ -9,6 +9,9 @@
    <feature url="features/${artifactId}.feature_${version}.qualifier.jar" id="${artifactId}.feature" version="${version}.qualifier">
       <category name="${artifactId}_category"/>
    </feature>
+   <feature url="features/${artifactId}.source.feature_${version}.qualifier.jar" id="${artifactId}.source.feature" version="${version}.qualifier">
+      <category name="${artifactId}_category"/>
+   </feature>
    <category-def name="${artifactId}_category" label="${pluginCategory}">
       <description>
          ${pluginCategory}

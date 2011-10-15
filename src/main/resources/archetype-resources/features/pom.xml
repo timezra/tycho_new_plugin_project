@@ -20,6 +20,7 @@
 	
 	<modules>
 		<module>${artifactId}.feature</module>
+		<module>${artifactId}.source.feature</module>
 	</modules>
 	
 	<profiles>
@@ -29,7 +30,7 @@
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jar-plugin</artifactId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
 					</plugin>
 				</plugins>
 			</build>

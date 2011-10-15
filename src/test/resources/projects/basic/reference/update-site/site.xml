@@ -6,6 +6,9 @@
    <feature url="features/my.company.do_something.feature_1.0.0.qualifier.jar" id="my.company.do_something.feature" version="1.0.0.qualifier">
       <category name="my.company.do_something_category"/>
    </feature>
+   <feature url="features/my.company.do_something.source.feature_1.0.0.qualifier.jar" id="my.company.do_something.source.feature" version="1.0.0.qualifier">
+      <category name="my.company.do_something_category"/>
+   </feature>
    <category-def name="my.company.do_something_category" label="Things That Do Stuff">
       <description>
          Things That Do Stuff
