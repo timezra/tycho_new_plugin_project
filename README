@@ -31,5 +31,5 @@ The installed artifact will then be locally available and can be used as follows
   $> cd __artifactId__
   $> mvn clean package integration-test
        Or, if you have a certificate for jar signing
-     mvn -Psign -Dkeystore=/path/to/keystore -Dstorepass=_keystore_password_ -Dalias=_keystore_alias_ clean package integration-test
+     mvn -Psign -Djarsigner.keystore=/path/to/keystore -Djarsigner.storepass=_keystore_password_ -Djarsigner.alias=_keystore_alias_ clean package integration-test
 
