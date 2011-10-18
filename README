@@ -27,7 +27,7 @@ The installed artifact will then be locally available and can be used as follows
        javaVersion: Currently only 1.6 has been tested
        pluginCategory: The Update Site Category that will contain the plug-in/feature
        pluginName: The OSGi Bundle-Name for the plug-in
-       updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/apply-save-actions)
+       updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/save-actions-extensions)
   $> cd __artifactId__
   $> mvn clean package integration-test
        Or, if you have a certificate for jar signing
