@@ -4,6 +4,18 @@
 	name="new-plugin-project-archetype" xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
+		<requiredProperty key="groupId">
+			<defaultValue>my.company</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="artifactId">
+			<defaultValue>my.company.do_something</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="version">
+			<defaultValue>1.0.0</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="package">
+			<defaultValue>my.company.do_something</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="pluginName">
 			<defaultValue>Do Something</defaultValue>
 		</requiredProperty>
