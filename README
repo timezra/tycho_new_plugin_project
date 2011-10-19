@@ -29,7 +29,7 @@ The installed artifact will then be locally available and can be used as follows
        pluginName: The OSGi Bundle-Name for the plug-in
        updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/save-actions-extensions)
   $> cd __artifactId__
-  $> mvn clean package integration-test
+  $> mvn clean verify
        Or, if you have a certificate for jar signing
-     mvn -Psign -Djarsigner.keystore=/path/to/keystore -Djarsigner.storepass=_keystore_password_ -Djarsigner.alias=_keystore_alias_ clean package integration-test
+     mvn -Psign -Djarsigner.keystore=/path/to/keystore -Djarsigner.storepass=_keystore_password_ -Djarsigner.alias=_keystore_alias_ clean verify
 
