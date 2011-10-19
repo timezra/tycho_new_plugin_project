@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-	name="apply-save-actions-parent" xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	name="new-plugin-project-archetype" xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<requiredProperties>
-		<requiredProperty key="groupId">
-			<defaultValue>my.company</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="artifactId">
-			<defaultValue>my.company.do_something</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="version">
-			<defaultValue>1.0.0</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="package">
-			<defaultValue>my.company.do_something</defaultValue>
-		</requiredProperty>
 		<requiredProperty key="pluginName">
 			<defaultValue>Do Something</defaultValue>
 		</requiredProperty>
@@ -37,106 +25,112 @@
 			<directory></directory>
 			<includes>
 				<include>README</include>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>plugins</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">		
-			<directory>plugins/__artifactId__</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet packaged="true" filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__/META-INF</directory>
-			<includes>
-				<include>**/*.MF</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__</directory>
-			<includes>
-				<include>build.properties</include>
-				<include>plugin.properties</include>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet packaged="true" filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__.tests/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__.tests/META-INF</directory>
-			<includes>
-				<include>**/*.MF</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>plugins/__artifactId__.tests</directory>
-			<includes>
-				<include>build.properties</include>
-				<include>plugin.properties</include>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>features</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>features/__artifactId__.feature</directory>
-			<includes>
-				<include>build.properties</include>
-				<include>feature.properties</include>
-				<include>feature.xml</include>
-				<include>license.html</include>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>features/__artifactId__.source.feature</directory>
-			<includes>
-				<include>build.properties</include>
-				<include>feature.properties</include>
-				<include>feature.xml</include>
-				<include>license.html</include>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>update-site/web</directory>
-			<includes>
-				<include>**/*.xsl</include>
-			</includes>
-		</fileSet>
-		<fileSet encoding="UTF-8">
-			<directory>update-site/web</directory>
-			<includes>
-				<include>**/*.css</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>update-site</directory>
-			<includes>
-				<include>index.html</include>
-				<include>pom.xml</include>
-				<include>site.xml</include>
 			</includes>
 		</fileSet>
 	</fileSets>
+	<modules>
+		<module id="${rootArtifactId}.plugins" dir="plugins" name="${rootArtifactId}.plugins">
+			<modules>
+				<module id="${rootArtifactId}" dir="__rootArtifactId__" name="${rootArtifactId}">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>META-INF</directory>
+							<includes>
+								<include>**/*.MF</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>build.properties</include>
+								<include>plugin.properties</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}.tests" dir="__rootArtifactId__.tests" name="${rootArtifactId}.tests">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/test/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>META-INF</directory>
+							<includes>
+								<include>**/*.MF</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>build.properties</include>
+								<include>plugin.properties</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+		<module id="${rootArtifactId}.features" dir="features" name="${rootArtifactId}.features">
+			<modules>
+				<module id="${rootArtifactId}.feature" dir="__rootArtifactId__.feature" name="${rootArtifactId}.feature">
+					<fileSets>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>build.properties</include>
+								<include>feature.properties</include>
+								<include>feature.xml</include>
+								<include>license.html</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}.source.feature" dir="__rootArtifactId__.source.feature" name="${rootArtifactId}.source.feature">
+					<fileSets>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>build.properties</include>
+								<include>feature.properties</include>
+								<include>feature.xml</include>
+								<include>license.html</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+		<module id="${rootArtifactId}.update-site" dir="update-site" name="${rootArtifactId}.update-site">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>web</directory>
+					<includes>
+						<include>**/*.xsl</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>web</directory>
+					<includes>
+						<include>**/*.css</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>index.html</include>
+						<include>site.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+	</modules>
 </archetype-descriptor>

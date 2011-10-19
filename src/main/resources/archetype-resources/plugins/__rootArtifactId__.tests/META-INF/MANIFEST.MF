@@ -4,12 +4,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ${artifactId}; singleton:=true
+Bundle-SymbolicName: ${artifactId};singleton:=true
 Bundle-Version: ${version}.qualifier
 Bundle-Vendor: %providerName
+Fragment-Host: ${rootArtifactId};bundle-version="${version}"
 Bundle-RequiredExecutionEnvironment: JavaSE-${javaVersion}
-Bundle-Activator: ${artifactId}.Activator
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
-Bundle-ActivationPolicy: lazy
+Require-Bundle: org.junit4;bundle-version="[4.5.0,5.0.0)"
 Bundle-Localization: plugin

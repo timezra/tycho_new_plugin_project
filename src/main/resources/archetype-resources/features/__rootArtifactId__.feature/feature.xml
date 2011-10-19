@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="${artifactId}.source.feature"
+      id="${artifactId}"
       label="%featureName"
       version="${version}.qualifier"
       provider-name="%providerName">
@@ -29,33 +29,10 @@
    </requires>
 
    <plugin
-         id="${artifactId}"
+         id="${rootArtifactId}"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="${artifactId}.tests"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="${artifactId}.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="${artifactId}.tests.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
 </feature>

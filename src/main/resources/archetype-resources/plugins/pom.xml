@@ -1,33 +1,25 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}.plugins</artifactId>
+	<artifactId>${artifactId}</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>${artifactId}.plugins</name>
-	<description>Parent project for the ${artifactId} plug-in and fragment projects</description>
-	
+	<name>${artifactId}</name>
+	<description>Parent project for the ${rootArtifactId} plug-in and fragment projects</description>
+
 	<parent>
 		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}.parent</artifactId>
+		<artifactId>${rootArtifactId}.parent</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
-	
+
 	<properties>
 		<maven.compiler.source>${javaVersion}</maven.compiler.source>
 		<maven.compiler.target>${javaVersion}</maven.compiler.target>
 	</properties>
-	
-	<modules>
-		<module>${artifactId}</module>
-		<module>${artifactId}.tests</module>
-	</modules>
-	
+
 	<profiles>
 		<profile>
 			<id>sign</id>
@@ -41,13 +33,13 @@
 			</build>
 		</profile>
 	</profiles>
-	
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-source-plugin</artifactId>
-				<version>${symbol_dollar}{tycho-version}</version>
+				<version>${tycho-version}</version>
 				<executions>
 					<execution>
 						<id>plugin-source</id>

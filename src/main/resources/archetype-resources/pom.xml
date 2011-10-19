@@ -1,26 +1,17 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}.parent</artifactId>
+	<artifactId>${rootArtifactId}.parent</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>${artifactId}.parent</name>
-	<description>Parent project for the ${artifactId} project set</description>
+	<name>${rootArtifactId}.parent</name>
+	<description>Parent project for the ${rootArtifactId} project set</description>
 
 	<properties>
 		<tycho-version>0.13.0</tycho-version>
 	</properties>
-
-	<modules>
-		<module>plugins</module>
-		<module>features</module>
-		<module>update-site</module>
-	</modules>
 
 	<profiles>
 		<profile>
@@ -58,13 +49,13 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${symbol_dollar}{tycho-version}</version>
+				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${symbol_dollar}{tycho-version}</version>
+				<version>${tycho-version}</version>
 				<configuration>
 					<resolver>p2</resolver>
 				</configuration>

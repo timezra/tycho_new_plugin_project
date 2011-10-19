@@ -6,13 +6,13 @@
    <description name="${pluginName} Update Site" url="${updateSiteLocation}">
       ${pluginName} Update Site
    </description>
-   <feature url="features/${artifactId}.feature_${version}.qualifier.jar" id="${artifactId}.feature" version="${version}.qualifier">
-      <category name="${artifactId}_category"/>
+   <feature url="features/${rootArtifactId}.feature_${version}.qualifier.jar" id="${rootArtifactId}.feature" version="${version}.qualifier">
+      <category name="${rootArtifactId}_category"/>
    </feature>
-   <feature url="features/${artifactId}.source.feature_${version}.qualifier.jar" id="${artifactId}.source.feature" version="${version}.qualifier">
-      <category name="${artifactId}_category"/>
+   <feature url="features/${rootArtifactId}.source.feature_${version}.qualifier.jar" id="${rootArtifactId}.source.feature" version="${version}.qualifier">
+      <category name="${rootArtifactId}_category"/>
    </feature>
-   <category-def name="${artifactId}_category" label="${pluginCategory}">
+   <category-def name="${rootArtifactId}_category" label="${pluginCategory}">
       <description>
          ${pluginCategory}
       </description>

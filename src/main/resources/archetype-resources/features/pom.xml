@@ -1,28 +1,20 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}.features</artifactId>
+	<artifactId>${artifactId}</artifactId>
 	<version>${version}-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>${artifactId}.features</name>
-	<description>Parent project for the ${artifactId} feature projects</description>
-	
+	<name>${artifactId}</name>
+	<description>Parent project for the ${rootArtifactId} feature projects</description>
+
 	<parent>
 		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}.parent</artifactId>
+		<artifactId>${rootArtifactId}.parent</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
-	
-	<modules>
-		<module>${artifactId}.feature</module>
-		<module>${artifactId}.source.feature</module>
-	</modules>
-	
+
 	<profiles>
 		<profile>
 			<id>sign</id>

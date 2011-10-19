@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,13 +5,13 @@
 	<groupId>${groupId}</groupId>
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}-SNAPSHOT</version>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>eclipse-feature</packaging>
 	<name>${artifactId}</name>
-	<description>${artifactId} plug-in project</description>
+	<description>Feature project for the ${rootArtifactId} plug-in</description>
 	
 	<parent>
 		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}.plugins</artifactId>
+		<artifactId>${rootArtifactId}.features</artifactId>
 		<version>${version}-SNAPSHOT</version>
 	</parent>
 </project>

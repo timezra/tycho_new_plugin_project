@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>my.company</groupId>
 	<artifactId>my.company.do_something.features</artifactId>
@@ -8,18 +7,13 @@
 	<packaging>pom</packaging>
 	<name>my.company.do_something.features</name>
 	<description>Parent project for the my.company.do_something feature projects</description>
-	
+
 	<parent>
 		<groupId>my.company</groupId>
 		<artifactId>my.company.do_something.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	
-	<modules>
-		<module>my.company.do_something.feature</module>
-		<module>my.company.do_something.source.feature</module>
-	</modules>
-	
+
 	<profiles>
 		<profile>
 			<id>sign</id>
@@ -33,4 +27,8 @@
 			</build>
 		</profile>
 	</profiles>
+  <modules>
+    <module>my.company.do_something.feature</module>
+    <module>my.company.do_something.source.feature</module>
+  </modules>
 </project>
