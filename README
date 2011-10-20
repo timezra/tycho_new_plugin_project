@@ -9,7 +9,7 @@ This archetype is currently in the following Maven repositories
     $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/snapshots
        Choose the snapshot version of the timezra.tycho:new-plugin-project-archetype
   releases  - http://timezra.github.com/maven/releases
-    $> mvn mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/releases
+    $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/releases
        Choose the release version of the timezra.tycho:new-plugin-project-archetype
 
 This project can be built and tested using standard Maven goals:
