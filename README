@@ -5,11 +5,11 @@ This contents of this project structure are based on the sample project outlined
 The goal of this archetype is to enable a developer to deploy a working plugin to the world quickly by automating some of the ceremony involved in setting up all the components required for publishing a plug-in.
 
 This archetype is currently in the following Maven repositories
-  snapshots - http://timezra.github.com/maven/snapshots
-    $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/snapshots
+  snapshots - http://timezra.github.com/maven/snapshots/archetypes
+    $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/snapshots/archetypes
        Choose the snapshot version of the timezra.tycho:new-plugin-project-archetype
-  releases  - http://timezra.github.com/maven/releases
-    $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/releases
+  releases  - http://timezra.github.com/maven/releases/archetypes
+    $> mvn archetype:generate -DarchetypeCatalog=http://timezra.github.com/maven/releases/archetypes
        Choose the release version of the timezra.tycho:new-plugin-project-archetype
 
 This project can be built and tested using standard Maven goals:
