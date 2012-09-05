@@ -5,7 +5,7 @@
 
 	<groupId>timezra.tycho</groupId>
 	<artifactId>new-plugin-project-archetype</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>maven-archetype</packaging>
 	<name>new-plugin-project-archetype</name>
 	<description>Creates a new Tycho-enabled Eclipse plug-in project heirarchy along with a test fragment, a feature and an update site.</description>
