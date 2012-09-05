@@ -23,8 +23,8 @@ The installed artifact will then be locally available and can be used as follows
        artifactId: The OSGi Bundle-SymbolicName
        version: The Maven version as well as the OSGi Bundle-Version, both suffixed with -SNAPSHOT and .qualifier, respectively
        package: The root package of the plug-in (often the same as the artifactId) 
-       eclipseVersion: Currently only indigo has been tested
-       javaVersion: Currently only 1.6 has been tested
+       eclipseVersion: Currently both indigo and juno have been tested
+       javaVersion: Currently Java 1.6 and 1.7 have been tested
        pluginCategory: The Update Site Category that will contain the plug-in/feature
        pluginName: The OSGi Bundle-Name for the plug-in
        updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/save-actions-extensions)

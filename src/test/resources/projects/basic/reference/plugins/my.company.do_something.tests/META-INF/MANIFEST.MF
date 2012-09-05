@@ -5,6 +5,6 @@ Bundle-SymbolicName: my.company.do_something.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: %providerName
 Fragment-Host: my.company.do_something;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.junit4;bundle-version="[4.5.0,5.0.0)"
 Bundle-Localization: plugin

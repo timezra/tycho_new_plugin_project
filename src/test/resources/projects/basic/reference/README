@@ -12,6 +12,6 @@ If you would like to build an update site for this project with signed jars use 
 When importing these projects into Eclipse, you should be able to import them as Existing Maven Projects (with the m2e plugin). This should create the appropriate .classpath and .project files.
 You may need to delete the my.company.do_something.tests project from the workspace (but not from disk) and then re-import it as a General -> Existing Project after the .classpath and .project files have been created. This might have something to do with its being a fragment.
 
-Because of an m2e bug (https://issues.sonatype.org/browse/MNGECLIPSE-966), you may need to set the JRE for my.company.do_something and my.company.do_something.tests to 1.6.
+Because of an m2e bug (https://issues.sonatype.org/browse/MNGECLIPSE-966), you may need to set the JRE for my.company.do_something and my.company.do_something.tests to 1.7.
 
 This plug-in can also be installed from the following update site: http://my-company/update-site

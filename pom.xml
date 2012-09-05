@@ -25,7 +25,16 @@
 		<developerConnection>scm:git:git@github.com:timezra/tycho_new_plugin_project.git</developerConnection>
 		<url>http://github.com/timezra/tycho_new_plugin_project.git</url>
 	</scm>
-
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshot-repository</id>
+			<name>Snapshot Repository</name>
+			<!-- <url>scp://host/snapshots/</url> -->
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+	
 	<developers>
 		<developer>
 			<id>timezra</id>
