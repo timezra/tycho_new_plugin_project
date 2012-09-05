@@ -33,10 +33,9 @@
 		<profile>
 			<id>osx</id>
 			<activation>
-				<property>
-					<name>java.vendor.url</name>
-					<value>http://www.apple.com/</value>
-				</property>
+				<os>
+					<family>mac</family>
+				</os>
 			</activation>
 			<build>
 				<pluginManagement>
