@@ -8,7 +8,7 @@
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>new-plugin-project-archetype</name>
-	<description>Creates a new Tycho-enabled Eclipse plug-in project heirarchy along with a test fragment, a feature and an update site.</description>
+	<description>Creates a new Tycho-enabled Eclipse plug-in project heirarchy along with a test fragment, a feature and a p2 repository.</description>
 
 	<url>https://github.com/timezra/tycho_new_plugin_project</url>
 

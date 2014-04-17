@@ -19,14 +19,14 @@
 		<requiredProperty key="pluginName">
 			<defaultValue>Do Something</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="updateSiteLocation">
-			<defaultValue>http://www.my.company/update-site</defaultValue>
+		<requiredProperty key="p2RepositoryLocation">
+			<defaultValue>http://www.my.company/p2Repository</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="javaVersion">
 			<defaultValue>1.7</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="eclipseVersion">
-			<defaultValue>juno</defaultValue>
+			<defaultValue>kepler</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="pluginCategory">
 			<defaultValue>Things That Do Stuff</defaultValue>
@@ -121,7 +121,7 @@
 				</module>
 			</modules>
 		</module>
-		<module id="${rootArtifactId}.update-site" dir="update-site" name="${rootArtifactId}.update-site">
+		<module id="${rootArtifactId}.p2Repository" dir="p2Repository" name="${rootArtifactId}.p2Repository">
 			<fileSets>
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory>web</directory>
@@ -139,7 +139,7 @@
 					<directory></directory>
 					<includes>
 						<include>index.html</include>
-						<include>site.xml</include>
+						<include>category.xml</include>
 					</includes>
 				</fileSet>
 			</fileSets>

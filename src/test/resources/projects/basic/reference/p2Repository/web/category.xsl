@@ -5,11 +5,11 @@
 <xsl:for-each select="site">
 	<html>
 	<head>
-	<title>my.company.do_something.update-site</title>
-	<style>@import url("web/site.css");</style>
+	<title>my.company.do_something.p2Repository</title>
+	<style>@import url("web/category.css");</style>
 	</head>
 	<body>
-	<h1 class="title">my.company.do_something.update-site</h1>
+	<h1 class="title">my.company.do_something.p2Repository</h1>
 	<p class="bodyText"><xsl:value-of select="description"/></p>
 	<table width="100%" border="0" cellspacing="1" cellpadding="2">
 	<xsl:for-each select="category-def">

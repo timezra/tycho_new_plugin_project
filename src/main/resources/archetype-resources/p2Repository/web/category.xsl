@@ -9,7 +9,7 @@
 	<html>
 	<head>
 	<title>${artifactId}</title>
-	<style>@import url("web/site.css");</style>
+	<style>@import url("web/category.css");</style>
 	</head>
 	<body>
 	<h1 class="title">${artifactId}</h1>

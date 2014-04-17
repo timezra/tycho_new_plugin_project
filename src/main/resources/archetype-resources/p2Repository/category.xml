@@ -3,8 +3,8 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="${pluginName} Update Site" url="${updateSiteLocation}">
-      ${pluginName} Update Site
+   <description name="${pluginName} P2 Repository" url="${p2RepositoryLocation}">
+      ${pluginName} P2 Repository
    </description>
    <feature url="features/${rootArtifactId}.feature_${version}.qualifier.jar" id="${rootArtifactId}.feature" version="${version}.qualifier">
       <category name="${rootArtifactId}_category"/>

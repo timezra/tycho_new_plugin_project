@@ -1,4 +1,4 @@
-This project contains a Maven/Tycho archetype for creating a new Tycho-enabled Eclipse plugin, a test fragment, a feature and an update site.
+This project contains a Maven/Tycho archetype for creating a new Tycho-enabled Eclipse plugin, a test fragment, a feature and a p2 repository.
 
 This contents of this project structure are based on the sample project outlined in this tutorial: http://timezra.blogspot.com/2011/10/eclipse-plug-ins-program-to-publish.html and the Maven archetype created in a subsequent blog entry: http://timezra.blogspot.com/2011/10/tycho-archetype.html
 
@@ -23,11 +23,11 @@ The installed artifact will then be locally available and can be used as follows
        artifactId: The OSGi Bundle-SymbolicName
        version: The Maven version as well as the OSGi Bundle-Version, both suffixed with -SNAPSHOT and .qualifier, respectively
        package: The root package of the plug-in (often the same as the artifactId) 
-       eclipseVersion: Currently both indigo and juno have been tested
+       eclipseVersion: Currently indigo and juno work with version 1.0.1 and kepler works with version 1.0.2
        javaVersion: Currently Java 1.6 and 1.7 have been tested
-       pluginCategory: The Update Site Category that will contain the plug-in/feature
+       pluginCategory: The p2 repository category that will contain the plug-in/feature
        pluginName: The OSGi Bundle-Name for the plug-in
-       updateSiteLocation: The URL where the update-site will be published (e.g., http://timezra.github.com/save-actions-extensions)
+       p2RepositoryLocation: The URL where the p2 repository will be published (e.g., http://timezra.github.com/save-actions-extensions)
   $> cd __artifactId__
   $> mvn clean verify
        Or, if you have a certificate for jar signing

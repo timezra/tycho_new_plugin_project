@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Do Something Update Site" url="http://my-company/update-site">
-      Do Something Update Site
+   <description name="Do Something P2 Repository" url="http://my-company/p2Repository">
+      Do Something P2 Repository
    </description>
    <feature url="features/my.company.do_something.feature_1.0.0.qualifier.jar" id="my.company.do_something.feature" version="1.0.0.qualifier">
       <category name="my.company.do_something_category"/>

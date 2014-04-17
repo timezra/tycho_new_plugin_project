@@ -18,8 +18,8 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="http://my-company/update-site"/>
-      <discovery label="%updateSiteName" url="http://my-company/update-site"/>
+      <update label="%p2RepositoryName" url="http://my-company/p2Repository"/>
+      <discovery label="%p2RepositoryName" url="http://my-company/p2Repository"/>
    </url>
    
    <requires>

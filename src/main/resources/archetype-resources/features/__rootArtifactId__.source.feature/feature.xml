@@ -21,8 +21,8 @@
    </license>
 
    <url>
-      <update label="%updateSiteName" url="${updateSiteLocation}"/>
-      <discovery label="%updateSiteName" url="${updateSiteLocation}"/>
+      <update label="%p2RepositoryName" url="${p2RepositoryLocation}"/>
+      <discovery label="%p2RepositoryName" url="${p2RepositoryLocation}"/>
    </url>
    
    <requires>
